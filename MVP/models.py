@@ -19,7 +19,7 @@ class DemandasDePecas(models.Model):
     email = models.CharField(max_length=100, verbose_name='Email', blank=False, null=False)
     telefone = models.CharField(max_length=10, verbose_name='Telefone')
     celular = models.CharField(max_length=11, verbose_name='Celular', blank=False, null=False)
-    anunciante = models.OneToOneField(User, to_field='username', on_delete=models.CASCADE)
+    anunciante = models.ForeignKey(User, to_field='username', on_delete=models.CASCADE, unique=False)
     status = models.CharField(max_length=10, verbose_name='Qual Status da Demanda?', choices=STATUS, default='Aberta')
 
     class Meta:
