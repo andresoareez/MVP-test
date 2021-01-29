@@ -20,7 +20,8 @@ class DemandaDePeca(admin.ModelAdmin):
         'descricao',
     ]
     list_filter = [
-        'status'
+        'status',
+        'anunciante',
     ]
     list_editable = [
         'status'
