@@ -4,11 +4,6 @@ from django.contrib.auth.models import User
 
 class DemandasDePecas(models.Model):
 
-    STATUS = [
-        ('Aberta', 'Aberta'),
-        ('Finalizada', 'Finalizada'),
-    ]
-
     descricao = models.TextField(max_length=300, verbose_name='Descrição da Peça')
     CEP = models.CharField(max_length=9, blank=False, null=False)
     logradouro = models.CharField(max_length=200, verbose_name='Endereço')
@@ -20,7 +15,9 @@ class DemandasDePecas(models.Model):
     telefone = models.CharField(max_length=10, verbose_name='Telefone')
     celular = models.CharField(max_length=11, verbose_name='Celular', blank=False, null=False)
     anunciante = models.ForeignKey(User, to_field='username', on_delete=models.CASCADE, unique=False)
-    status = models.CharField(max_length=10, verbose_name='Qual Status da Demanda?', choices=STATUS, default='Aberta')
+    #status = models.BooleanField(verbose_name='A demanda está finalizada?', default=False)
+    statusdemanda = models.BooleanField(verbose_name='A demanda está finalizada?', default=False)
+
 
     class Meta:
         verbose_name= 'Demanda de Peça'

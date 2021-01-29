@@ -1,8 +1,9 @@
 from django.contrib import admin
 from .models import DemandasDePecas
+from import_export.admin import ImportExportModelAdmin
 
 
-class DemandaDePeca(admin.ModelAdmin):
+class DemandaDePeca(ImportExportModelAdmin):
     list_display = [
         'descricao',
         'CEP',
@@ -14,21 +15,18 @@ class DemandaDePeca(admin.ModelAdmin):
         'email',
         'telefone',
         'anunciante',
-        'status',
+        'statusdemanda',
     ]
     list_display_links = [
         'descricao',
     ]
     list_filter = [
-        'status',
+        'statusdemanda',
         'anunciante',
-    ]
-    list_editable = [
-        'status'
     ]
     search_fields = [
         'anunciante',
-        'status',
+        'statusdemanda',
         'estado',
         'cidade',
 
