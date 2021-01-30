@@ -1,3 +1,5 @@
-# APIREST para um pequeno MVP, caso seja cadastrado, poderá fazer publicações de cotacões para peças especifícas de droids
+# APIREST para um pequeno MVP
 
-<p align="center">pAPIREST para um pequeno MVP, caso seja cadastrado, poderá fazer publicações de cotacões para peças especifícas de droids</p>
+Voce poderá fazer publicações de cotacões para peças especifícas de droids, bem como fazer a manutenção e remoção delas. 
+
+
