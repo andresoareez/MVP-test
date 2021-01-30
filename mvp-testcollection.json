@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "589b0848-fda6-4edb-b766-323bcb813b19",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MVP-Test Collection",
+			"item": [
+				{
+					"name": "Lista de Demandas",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "adminadmin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "anunciante1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/demandas//",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"demandas",
+								"",
+								""
+							]
+						},
+						"description": "Lista de demandas filtrado pelo usuario logado"
+					},
+					"response": []
+				},
+				{
+					"name": "Inserindo uma nova Demanda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"id\": \"4\",\n        \"descricao\": \"Teste de peca enviada via request no postman\",\n        \"CEP\": \"54400160\",\n        \"logradouro\": \"Rua Teste do postman\",\n        \"bairro\": \"Postman\",\n        \"cidade\": \"teste do postman\",\n        \"numero\": \"20\",\n        \"estado\": \"PM\",\n        \"email\": \"postmanrequest@mvp-test.com\",\n        \"telefone\": \"8121345454\",\n        \"celular\": \"81773583437\",\n        \"statusdemanda\": false,\n        \"anunciante\": \"anunciante1\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/demandas//",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"demandas",
+								"",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterando todos os dados da Demanda de Peca",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"descricao\": \"Teste de peca enviada e trocada via put\",\n    \"CEP\": \"54401160\",\n    \"logradouro\": \"Rua teste put do postman\",\n    \"bairro\": \"Possssstman\",\n    \"cidade\": \"testesss do postman\",\n    \"numero\": \"22\",\n    \"estado\": \"LE\",\n    \"email\": \"postrequest@mvp-test.com\",\n    \"telefone\": \"8121225454\",\n    \"celular\": \"81773543437\",\n    \"statusdemanda\": false,\n    \"anunciante\": \"anunciante1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/demandas//4/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"demandas",
+								"",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alterando apenas o valor de Finalizacao de Demanda",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"descricao\": \"Teste de peca enviada e trocada via put\",\n    \"CEP\": \"54401160\",\n    \"logradouro\": \"Rua teste put do postman\",\n    \"bairro\": \"Possssstman\",\n    \"cidade\": \"testesss do postman\",\n    \"numero\": \"22\",\n    \"estado\": \"LE\",\n    \"email\": \"postrequest@mvp-test.com\",\n    \"telefone\": \"8121225454\",\n    \"celular\": \"81773543437\",\n    \"statusdemanda\": true,\n    \"anunciante\": \"anunciante1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/demandas//4/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"demandas",
+								"",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletando uma Demanda",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 4,\n    \"descricao\": \"Teste de peca enviada e trocada via put\",\n    \"CEP\": \"54401160\",\n    \"logradouro\": \"Rua teste put do postman\",\n    \"bairro\": \"Possssstman\",\n    \"cidade\": \"testesss do postman\",\n    \"numero\": \"22\",\n    \"estado\": \"LE\",\n    \"email\": \"postrequest@mvp-test.com\",\n    \"telefone\": \"8121225454\",\n    \"celular\": \"81773543437\",\n    \"statusdemanda\": true,\n    \"anunciante\": \"anunciante1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/demandas//4/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"demandas",
+								"",
+								"4",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "adminadmin",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "anunciante1",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
