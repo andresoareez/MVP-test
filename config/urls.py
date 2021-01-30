@@ -18,6 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 from MVP.views import DemandasViewSet, AdminViewSet
 
+# End Points API
 router = routers.DefaultRouter()
 router.register('demandas/', DemandasViewSet, basename='demandas')
 router.register('demandas/admin/', AdminViewSet, basename='admindemandas')

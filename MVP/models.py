@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+# Modelo de cadastro de demanda de peças detalhado fazendo uso do Model User
 class DemandasDePecas(models.Model):
 
     descricao = models.TextField(max_length=300, verbose_name='Descrição da Peça')
@@ -15,7 +16,6 @@ class DemandasDePecas(models.Model):
     telefone = models.CharField(max_length=10, verbose_name='Telefone')
     celular = models.CharField(max_length=11, verbose_name='Celular', blank=False, null=False)
     anunciante = models.ForeignKey(User, to_field='username', on_delete=models.CASCADE, unique=False)
-    #status = models.BooleanField(verbose_name='A demanda está finalizada?', default=False)
     statusdemanda = models.BooleanField(verbose_name='A demanda está finalizada?', default=False)
 
 

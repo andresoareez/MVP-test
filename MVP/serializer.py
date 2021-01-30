@@ -2,12 +2,13 @@ from rest_framework import serializers
 from .models import DemandasDePecas
 from .validadores import *
 
+#Serializadores para o tratamento de dados I/O
 
 class DemandaDePecasSerializer(serializers.ModelSerializer):
     class Meta:
         model = DemandasDePecas
         fields = '__all__'
-
+    # SERIE de validadores de dados
     def validate(self, dados):
         if not ValidaCep(dados['CEP']):
             raise serializers.ValidationError('O CEP não é Válido')
