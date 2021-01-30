@@ -1,0 +1,14 @@
+Aplicação MVP - 
+
+Aplicação foi feita em Django utilizando o Django restframework pela sua facilidade de escalabilidade e praticidade tanto em testes quanto em funcionalidades. 
+
+Para autenticacao como a aplicação era simples optei pela autenticação básica que o Djangorestframework ja oferece nas aplicações 
+
+Melhorias: 
+
+Acredito que em caso de progresso com essa aplicação seriam feitas melhorias na segurança de autenticação com JWT Token, integração e preenchimento automático do endereço usando o webservices ja usado para validação de dados de CEP
+Criação de inserção de novos usuário com novos endpoints para melhores opções de integração
+
+Para o caso da aplicação rodar localmente, alterar settings para a configuração definida para local. 
+
+
